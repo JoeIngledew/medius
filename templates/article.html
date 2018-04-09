@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags }}{% endblock %}
 {% block content %}
-{% import 'pcs/comments.html' as pcs with context %}
 <div class="page-container">
     <div class="entry-content">
         <div class="post-meta pure-g">
@@ -50,7 +49,6 @@
 
     <div class="entry-content">
         {{ article.content }}
-		{{ pcs.comments_quickstart("emailuser", "example.com") }}
     </div>
 
     <footer>
